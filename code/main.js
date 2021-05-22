@@ -8,3 +8,6 @@ const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 450;
 
+/*Create a constant variable image1 and set it to new Image().'new' is a special key word in Javascript and 'Image()' is a special built in class constructor. This will create a new blank object and assign it values and properties, based on built-in JavaScript image blue print. Simply said, we just created blank new image object which comes with src property*/
+const image1 = new Image();
+
