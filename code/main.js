@@ -12,7 +12,7 @@ canvas.height = 440; /*Changed canvas height to match image height*/
 const image1 = new Image();
 
 /*Set path to image1 using src property. image path must be relative to the location of main.js file inside the project structure for JavaScript to be able to see the image*/
-image1.src = 'code/image1.png';
+image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 
 /*Draw image using ctx and the built in drawImage method and give it three arguments. The first argument is the image I want to draw, the image1 variable from line 12. The second and third arguments are the horizontal x coordinate and the vertical y coordinate, respectively, where I want to draw it on canvas. Iwant the image to start from coordinates (0,0), which is the top left corner*/
 
