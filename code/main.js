@@ -15,7 +15,11 @@ const image1 = new Image();
 image1.src = 'code/image1.png';
 
 /*Draw image using ctx and the built in drawImage method and give it three arguments. The first argument is the image I want to draw, the image1 variable from line 12. The second and third arguments are the horizontal x coordinate and the vertical y coordinate, respectively, where I want to draw it on canvas. Iwant the image to start from coordinates (0,0), which is the top left corner*/
-ctx.drawImage(image1, 0, 0);
+
+/*Give image1 an event lister that listens for the load event then draws the image. The event listener waits for the image to be loaded then uses a function to call the draw image method to draw the image.*/
+image1.addEventListener('load', function() {
+    ctx.drawImage(image1, 0, 0);
+})
 
 
 
