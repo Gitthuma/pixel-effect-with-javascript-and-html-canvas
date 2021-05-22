@@ -2,3 +2,14 @@
 body {
   background: black;
 }
+
+/*Tag canvas with id and give it border, top, left, position, width, height and transform*/
+#canvas1 {
+  border: 3px solid white;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 800px;
+  height: 450px;
+  transform: translate(-50%, -50%); /*Centers the canvas*/
+}
