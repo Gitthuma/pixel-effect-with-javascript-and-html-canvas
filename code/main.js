@@ -17,6 +17,8 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 /*Draw image using ctx and the built in drawImage method and give it three arguments. The first argument is the image I want to draw, the image1 variable from line 12. The second and third arguments are the horizontal x coordinate and the vertical y coordinate, respectively, where I want to draw it on canvas. Iwant the image to start from coordinates (0,0), which is the top left corner*/
 
 /*Give image1 an event lister that listens for the load event then draws the image. The event listener waits for the image to be loaded then uses a function to call the draw image method to draw the image.*/
+
+/*drawImage built-in method has three version. The method used here is the simplest with three arguments. It can also take five arguments with the fourth and the fifth arguments being canvas.width and canvas.height that can be used to control the scale of the image. Th third versin has nine arguments and can be used to crop out pieces of sprite sheets*/
 image1.addEventListener('load', function() {
     ctx.drawImage(image1, 0, 0);
 })
