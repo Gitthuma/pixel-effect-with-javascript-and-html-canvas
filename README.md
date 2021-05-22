@@ -40,3 +40,9 @@ Learn to code for free and get a developer job: https://www.freecodecamp.org
 Read hundreds of articles on programming: https://freecodecamp.org/news
 
 And subscribe for new videos on technology every day: https://youtube.com/subscription_cent...
+
+Disclaimer: The image used in this tutorial does not belong to me. The image has been used as part of a learning exercise and no copyright infringement is intended. Incase of complains, please contact me on george.githuma@gmail.com.
+
+Image used: Disney Junior’s T.O.T.S. Is Our New Favorite Bundle of Joy
+
+Source: https://d23.com/disney-juniors-t-o-t-s-is-our-new-favorite-bundle-of-joy/
