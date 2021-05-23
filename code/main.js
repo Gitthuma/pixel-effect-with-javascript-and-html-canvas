@@ -45,6 +45,8 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 
 /*Re-assign the color values in the scannedData array declared in line 55 and use it to overwrite the existing scannedImage.data to the new gray scale data created by the loop*/
 
+/*Use the built-in putImageData to paint the new image data onto the canvas context. This method takes three arguments; an image data object and (x,y) coordinates from where to start drawing the image data object.*/
+
 image1.addEventListener('load', function() {
 
     ctx.drawImage(image1, 0, 0);
@@ -65,7 +67,8 @@ image1.addEventListener('load', function() {
     }
 
     scannedImage.data = scannedData;
-})
+    ctx.putImageData(scannedImage, 0, 0);
+});
 
 
 
