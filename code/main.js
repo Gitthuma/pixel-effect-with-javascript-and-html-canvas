@@ -43,6 +43,8 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 
 /*Assign averageColorValue to all three color values in each pixel to create gray scale*/
 
+/*Re-assign the color values in the scannedData array declared in line 55 and use it to overwrite the existing scannedImage.data to the new gray scale data created by the loop*/
+
 image1.addEventListener('load', function() {
 
     ctx.drawImage(image1, 0, 0);
@@ -61,6 +63,8 @@ image1.addEventListener('load', function() {
         scannedData[i+1] = averageColorValue;
         scannedData[i+2] = averageColorValue;
     }
+
+    scannedImage.data = scannedData;
 })
 
 
