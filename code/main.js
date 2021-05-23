@@ -32,13 +32,17 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 
 /*Any rgb color is a combination of red, green and blue. If you take any value between 0 and 255 and assign that value as red, green and blue like this rgb(50,50,50), you will get a shade of gray. To generate our gray shade, we will take color value for each pixel, calculate average, then assign the same average value as red green and blue on the same pixel turning it into gray scale.*/
 
+/*Inside the for loop, create a constant called total which is the sum of red green and blue rgb color values. We are jumping through the array four elements at a time, thus: scannedData[i] is the red pixel color value, scannedData[i+1] is the green pixel color value and scannedData[i+2] is the blue pixel color value.*/
+
 
 image1.addEventListener('load', function() {
     ctx.drawImage(image1, 0, 0);
     const scannedImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
     console.log(scannedImage);
     const scannedData = scannedImage.data;
-    for (let i = 0; i < scannedData.length; i += 4);
+    for (let i = 0; i < scannedData.length; i += 4) {
+        const total = scannedData[i] + scannedData[i+1] + scannedData[i+2];
+    }
 })
 
 
