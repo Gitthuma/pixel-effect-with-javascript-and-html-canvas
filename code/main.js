@@ -27,6 +27,12 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 /*Save the data component of the scannedImage data object into the scannedData variable. The data component is an array in Uint8ClampedArray format representing all the pixels that make up the image. In Uint8ClampedArray format, every set of four elements in an array, represents the four rgba values of a pixel. This is the data that will be used to manipulate colors in the image.*/
 
 /*Create a for loop that circles through all the pixels in the array. The final-expression inside the loop parenthesis will be (i += 4) and not (i++) because we are skipping four elements for every pixel.*/
+
+/*Make Image Gray Scale*/
+
+/*Any rgb color is a combination of red, green and blue. If you take any value between 0 and 255 and assign that value as red, green and blue like this rgb(50,50,50), you will get a shade of gray. To generate our gray shade, we will take color value for each pixel, calculate average, then assign the same average value as red green and blue on the same pixel turning it into gray scale.*/
+
+
 image1.addEventListener('load', function() {
     ctx.drawImage(image1, 0, 0);
     const scannedImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
