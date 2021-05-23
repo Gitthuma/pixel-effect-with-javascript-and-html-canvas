@@ -41,14 +41,25 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 
 /*Inside the for loop, create a constant averageColorValue. This is total sum devided by three since we achived the total by adding three numbers.*/
 
+/*Assign averageColorValue to all three color values in each pixel to create gray scale*/
+
 image1.addEventListener('load', function() {
+
     ctx.drawImage(image1, 0, 0);
+
     const scannedImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
     console.log(scannedImage);
+
     const scannedData = scannedImage.data;
+
     for (let i = 0; i < scannedData.length; i += 4) {
+
         const total = scannedData[i] + scannedData[i+1] + scannedData[i+2];
         const averageColorValue = total/3;
+
+        scannedData[i] = averageColorValue;
+        scannedData[i+1] = averageColorValue;
+        scannedData[i+2] = averageColorValue;
     }
 })
 
