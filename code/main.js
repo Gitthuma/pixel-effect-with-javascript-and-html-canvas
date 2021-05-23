@@ -19,8 +19,11 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 /*Give image1 an event lister that listens for the load event then draws the image. The event listener waits for the image to be loaded then uses a function to call the draw image method to draw the image.*/
 
 /*drawImage built-in method has three version. The method used here is the simplest with three arguments. It can also take five arguments with the fourth and the fifth arguments being canvas.width and canvas.height that can be used to control the scale of the image. Th third versin has nine arguments and can be used to crop out pieces of sprite sheets*/
+
+/*Use getImageData built-in method inside the event listener function to scan and analyse the color of each indivudual pixel that makes up the image. This method takes in four arguments which defines the area of canvas to be scanned for pixel informantion. The first two arguments are the (x,y) coordinates for the canvas starting point while the last two are (canvas.width, canvas.height) for the canvas end point.*/
 image1.addEventListener('load', function() {
     ctx.drawImage(image1, 0, 0);
+    const scannedImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
 })
 
 
