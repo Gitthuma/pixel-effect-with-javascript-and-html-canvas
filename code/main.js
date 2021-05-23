@@ -23,10 +23,13 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 /*Use getImageData built-in method inside the event listener function to scan and analyse the color of each indivudual pixel that makes up the image. This method takes in four arguments which defines the area of canvas to be scanned for pixel informantion. The first two arguments are the (x,y) coordinates for the canvas starting point while the last two are (canvas.width, canvas.height) for the canvas end point. This method scans all pixels on canvas, it goes from left to right, row by row from top to bottom. The order is important if you want to determine coordinates for each pixel.*/
 
 /*Add console.log inside the event listener function for the getImageData built-in method to return an image data object. Put simply, the console.log command prints out the results of the getImageData built-in method on to the console.*/
+
+/*Save the data component of the scannedImage data object into the scannedData variable. The data component is an array in Uint8ClampedArray format representing all the pixels that make up the image. In Uint8ClampedArray format, every set of four elements in an array, represents the four rgba values of a pixel. This is the data that will be used to manipulate colors in the image.*/
 image1.addEventListener('load', function() {
     ctx.drawImage(image1, 0, 0);
     const scannedImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
     console.log(scannedImage);
+    const scannedData = scannedImage.data;
 })
 
 
