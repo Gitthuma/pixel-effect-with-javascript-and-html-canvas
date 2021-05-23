@@ -34,6 +34,8 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 
 /*Inside the for loop, create a constant called total which is the sum of red green and blue rgb color values. We are jumping through the array four elements at a time, thus: scannedData[i] is the red pixel color value, scannedData[i+1] is the green pixel color value and scannedData[i+2] is the blue pixel color value.*/
 
+/*Inside the for loop, create a constant averageColorValue. This is total sum devided by three since we achived the total by adding three numbers.*/
+
 
 image1.addEventListener('load', function() {
     ctx.drawImage(image1, 0, 0);
@@ -42,6 +44,7 @@ image1.addEventListener('load', function() {
     const scannedData = scannedImage.data;
     for (let i = 0; i < scannedData.length; i += 4) {
         const total = scannedData[i] + scannedData[i+1] + scannedData[i+2];
+        const averageColorValue = total/3;
     }
 })
 
