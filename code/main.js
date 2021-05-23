@@ -20,7 +20,7 @@ image1.src = '../images/disney-junior-T-O-T-S.jpg'; /*Changed image path*/
 
 /*drawImage built-in method has three version. The method used here is the simplest with three arguments. It can also take five arguments with the fourth and the fifth arguments being canvas.width and canvas.height that can be used to control the scale of the image. Th third versin has nine arguments and can be used to crop out pieces of sprite sheets*/
 
-/*Use getImageData built-in method inside the event listener function to scan and analyse the color of each indivudual pixel that makes up the image. This method takes in four arguments which defines the area of canvas to be scanned for pixel informantion. The first two arguments are the (x,y) coordinates for the canvas starting point while the last two are (canvas.width, canvas.height) for the canvas end point.*/
+/*Use getImageData built-in method inside the event listener function to scan and analyse the color of each indivudual pixel that makes up the image. This method takes in four arguments which defines the area of canvas to be scanned for pixel informantion. The first two arguments are the (x,y) coordinates for the canvas starting point while the last two are (canvas.width, canvas.height) for the canvas end point. This method scans all pixels on canvas, it goes from left to right, row by row from top to bottom. The order is important if you want to determine coordinates for each pixel.*/
 image1.addEventListener('load', function() {
     ctx.drawImage(image1, 0, 0);
     const scannedImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
